@@ -84,6 +84,14 @@ INSERT INTO `BB_proceduras02`.`Pedido` (`CodigoProduto`, `CodigoCliente`) VALUES
 
 -- 1. Procedure para adicionar uma categoria
 
+CREATE PROCEDURE AddCategoria(
+    IN nome VARCHAR(45),
+    IN desconto VARCHAR(45)
+)
+BEGIN
+    INSERT INTO Categoria (Nome, Desconto) VALUES (nome, desconto);
+END;
+
 
 -- 2. Procedure para adicionar um produto
 
